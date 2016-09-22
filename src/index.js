@@ -112,7 +112,7 @@ export default class Sound extends React.Component {
 
       sound.options.onfinish = () => this.props.onFinishedPlaying() || null;
       sound.options.whileplaying = () => this.props.onPlaying(this) || null;
-      sound.onPlaying.whileloading = () => this.props.onLoading(this) || null;
+      sound.options.whileloading = () => this.props.onLoading(this) || null;
     };
 
     if (this.props.url !== prevProps.url) {
